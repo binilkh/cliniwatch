@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sticky-div {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+}
+.sticky-div-bottom {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+}
+ 
+  @media screen and (max-width: 480px) { 
+    .label-div-small { 
+      display: block; 
+    }
+    .label-div-large {
+      display: none;
+    }
+  }
+
+  .info {
+    display: none;
+  }
+
+  .bar:hover + .info {
+    display: block;
+  }
+  .hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
